@@ -10,12 +10,20 @@
          }
      ],
      "permissions": [
-        "redcap_every_page_top"
+        "redcap_every_page_top",
+        "redcap_project_home_page"
     ],
     "project-settings": [
         {
             "key": "badges",
             "name": "Number of open queries to appear next to the Resolve Issues link",
+            "required": true,
+            "type": "checkbox",
+            "repeatable": false
+        },
+        {
+            "key": "dq-table",
+            "name": "Display table of query statuses on Project Home",
             "required": true,
             "type": "checkbox",
             "repeatable": false
