@@ -1,0 +1,25 @@
+{
+    "name": "Query Tweaks",
+    "namespace": "PTTU\\QueryTweaks", 
+    "description": "Adds minor tweaks to the Data Resolution Workflow in REDCap",
+    "authors": [
+        {
+             "name": "Milan Chauhan",
+             "email": "milan.chauhan@porthosp.nhs.uk",
+             "institution": "PTTU"
+         }
+     ],
+     "permissions": [
+        "redcap_every_page_top"
+    ],
+    "project-settings": [
+        {
+            "key": "badges",
+            "name": "Number of open queries to appear next to the Resolve Issues link",
+            "required": true,
+            "type": "checkbox",
+            "repeatable": false
+        }
+    ],
+     "framework-version": 9
+ }
