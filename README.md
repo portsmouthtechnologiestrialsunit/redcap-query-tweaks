@@ -4,7 +4,7 @@ Tweaks to the Data Resolution Workflow in REDCap.
 ## About
 This EM is designed to make minor UI improvements to the Data Resolution Workflow in REDCap such as adding a badge to show the number of open queries.
 
-<img width="337" alt="Screenshot 2023-11-24 at 17 46 08" src="https://github.com/milan-chauhan/redcap-query-tweaks/assets/58751391/4cd53fa2-1038-4ef8-a6a3-067e5e806d47">
+![Web capture_28-11-2023_151532_redcap pttu org uk](https://github.com/portsmouthtechnologiestrialsunit/redcap-query-tweaks/assets/108129632/8f8d522d-2952-4b4b-b854-fbfb73521176)
 
 ## Support
 For issues/suggestions/improvements you can either:
