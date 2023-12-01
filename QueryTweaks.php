@@ -1,10 +1,9 @@
 <?php
 namespace PTTU\QueryTweaks;
-error_reporting(E_ALL);
+// error_reporting(E_ALL);
 
 use ExternalModules\AbstractExternalModule;
 use DataQuality;
-use RCView;
 
 class QueryTweaks extends AbstractExternalModule {
 
@@ -14,19 +13,19 @@ class QueryTweaks extends AbstractExternalModule {
         Query Badge:
         Get the number of open queries and append the number of open queries to Resolve Issues in the app panel
         */
+        
+        if (!isset($_GET['pid'])) return;
 
         $settings = $this->getProjectSettings();
 
-        if (!isset($_GET['pid'])) return;
-
-        global $user_rights, $data_resolution_enabled;
+        global $user_rights, $data_resolution_enabled, $lang;
 
         if ($data_resolution_enabled == '2' && $user_rights['data_quality_resolution'] > 0) {
             
-			// Get a count of unresolved issues
+            // Get a count of unresolved issues
             $dq = new DataQuality();
-			$queryStatuses = $dq->countDataResIssues();
-			$numOpenIssues = $queryStatuses['OPEN'];
+            $queryStatuses = $dq->countDataResIssues();
+            $numOpenIssues = $queryStatuses['OPEN'];
             
             if ($settings['badges']) {
                 if ($numOpenIssues > 0) {
@@ -36,7 +35,7 @@ class QueryTweaks extends AbstractExternalModule {
                                 id: 'dq_issue_count',
                                 class: 'badgerc',
                                 text: <?php echo $numOpenIssues; ?>
-                            }).appendTo($('#app_panel a:contains("Resolve Issues")'));
+                            }).appendTo($('#app_panel a:contains(<?php echo $lang['dataqueries_148'] ?>)'));
                         });
                     </script>
                     <?php

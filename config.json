@@ -1,7 +1,7 @@
 {
     "name": "Query Tweaks",
     "namespace": "PTTU\\QueryTweaks", 
-    "description": "Adds minor tweaks to the Data Resolution Workflow in REDCap",
+    "description": "Adds minor UI tweaks to the Data Resolution Workflow",
     "authors": [
         {
              "name": "Milan Chauhan",
@@ -15,11 +15,11 @@
     "project-settings": [
         {
             "key": "badges",
-            "name": "Number of open queries to appear next to the Resolve Issues link",
+            "name": "Show the number of open queries next to Resolve Issues",
             "required": true,
             "type": "checkbox",
             "repeatable": false
         }
     ],
-     "framework-version": 9
+     "framework-version": 10
  }
